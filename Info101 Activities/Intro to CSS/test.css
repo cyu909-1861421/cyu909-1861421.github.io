@@ -58,7 +58,11 @@ ul{
 }
 
 #LeftNav img{
-
+    border:solid 8px white;
+    border-style: dotted;
+    width: 360px;
+    background-color: lightgoldenrodyellow;
+    opacity: 0.9;
 }
 
 #LeftNav ul{
