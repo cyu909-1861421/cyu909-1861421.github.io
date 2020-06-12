@@ -6,10 +6,9 @@
 </head>
 <body>
 
-<h2>Job Application</h2>
+<h2>Job Application for Starbucks</h2>
 
 <form action="http://gclass.alexburner.com/formtest.php" method="post">
-
 	<fieldset>
 		<legend>Account</legend>
 		<div class="field">
@@ -24,14 +23,56 @@
 			<label>Repeat password:</label> 
 			<input type="password" name="password_r">
 		</div>
+		<div>
+			<label for="avatar">Upload a profile picture:</label>
+			<input type="file" name="profile" accept="image/png, image/jpeg">
+		</div>
+	</fieldset>
+	
+	<fieldset>
+		<Legend>Position</Legend>
+		<div class="field">
+			<label>Position You Are Applying For:</label> 
+			<select name="state">
+				<option value="" selected="true">Select a Position</option>
+				<option value="assistant_store_mangers">Assistant Store Managers</option>
+				<option value="baristas">Baristas</option>
+				<option value="district_managers">District Managers</option>
+				<option value="shift_managers">Shift Managers</option>
+				<option value="shift_supervisors">Shift Supervisors</option>
+				<option value="store_managers">Store Managers</option>
+			</select>
+		</div>
+		<div class="field">
+			<label>Location/Department:</label> 
+			<input type="text" name="location">
+		</div>
+		<div class="field">
+			<label>Desired Salary:</label> 
+			<input type="number" name="salary">
+		</div>
 	</fieldset>
 
 	<fieldset>
 		<legend>Personal Information</legend>
+		<p> Your Name </p>
 		<div class="field">
-			<label>Full Name:</label> 
-			<input type="text" name="name">
+			<label>First Name:</label> 
+			<input type="text" name="firstname">
 		</div>
+		<div class="field">
+			<label>Middle Name (if any):</label> 
+			<input type="text" name="middlename">
+		</div>
+		<div class="field">
+			<label>Last Name:</label> 
+			<input type="text" name="lastname">
+		</div>
+		<div class="field">
+			<label>Nickname (if any):</label> 
+			<input type="text" name="nickname">
+		</div>
+		<p> Present Address </p>
 		<div class="field">
 			<label>Street Address:</label> 
 			<input type="text" name="street">
@@ -98,18 +139,42 @@
 			</select>
 		</div>
 		<div class="field">
-			<label>ZIP:</label> 
+			<label>ZIP Code:</label> 
 			<input type="text" name="zip">
 		</div>
+		<p> Contact Information </p>
+		<div class="field">
+			<label>Email:</label> 
+			<input type="text" name="email">
+		</div>
+		<div class="field">
+			<label>Phone Number:</label> 
+			<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+		</div>
+		<p> Other Questions </p>
+		<div class="field">
+			<label>Are you legally eligible for employment in the U.S.?</label> 
+			<input type="radio" name="legal" value="yes">Yes
+			<input type="radio" name="legal" value="no">No
+		</div>
+		<div class="field">
+			<label>Are you less than 18 years of age? </label> 
+			<input type="radio" name="age" value="yes">Yes
+			<input type="radio" name="age" value="no">No
+		</div>
+		<div class="field">
+			<label>Have you been convicted of a crime in the last seven (7) years? </label> 
+			<input type="radio" name="crime" value="yes">Yes
+			<input type="radio" name="crime" value="no">No
+		</div>
+		<div class="field">
+			<label>If Yes, please state the convictions. This will not necessarily disqualify you for employment.</label><br>
+			<textarea name="conviction" rows="3" cols="60"></textarea>
+		</div>	
 	</fieldset>
 
 	<fieldset>
 		<legend>Availability</legend>
-		<div class="field">
-			<label>Are you legally able to be employed in this country?</label> 
-			<input type="radio" name="legal" value="yes">Yes
-			<input type="radio" name="legal" value="no">No
-		</div>
 		<div class="field">
 			<label>What type of position are you seeking? (check all that apply)</label>
 			<ul>
@@ -118,6 +183,10 @@
 				<li><input type="checkbox" name="position_sl" value="seasonal">Seasonal</li>
 				<li><input type="checkbox" name="position_tp" value="temporary">Temporary</li>
 			</ul>
+		</div>
+		<div>
+			<label for="start">Date You Can Start:</label>
+			<input type="date" name="startDate" min="2020-06-11">
 		</div>
 		<div class="field">
 			<label>Hours available</label>
@@ -153,22 +222,59 @@
 					<td><input type="time" size="5" name="sa_until"></td>
 				</tr>
 			</table>
+			<div class="field">
+				<label>Are you able to work overtime? </label> 
+				<input type="radio" name="overtime" value="yes">Yes
+				<input type="radio" name="overtime" value="no">No
+			</div>
+			<div class="field">
+				<label>Have you ever worked for Starbucks?</label> 
+				<input type="radio" name="previous_experience" value="yes">Yes
+				<input type="radio" name="previous_experience" value="no">No
+			</div>
+			<div class="field">
+				<label>If Yes, when and which store?</label><br>
+				<textarea name="detail" rows="3" cols="60"></textarea>
+			</div>	
+
 		</div>
 	</fieldset>
 
 	<fieldset>
 		<legend>Personal Statement</legend>
 		<div class="field">
-			<label>Why do you deserve this job?</label><br>
-			<textarea name="deserve" rows="6" cols="60"></textarea>
+			<label>Skills (check all that apply)</label>
+			<ul>
+				<li><input type="checkbox" name="skill_word" value="parttime">Word for Windows</li>
+				<li><input type="checkbox" name="skill_excel" value="fulltime">Excel</li>
+				<li><input type="checkbox" name="skill_10key" value="seasonal">10 Key</li>
+				<li><input type="checkbox" name="skill_other" value="temporary">Others (if yes, please explain below)</li>
+			</ul>
 		</div>
 		<div class="field">
-			<label>Describe a recent project:</label><br>
-			<textarea name="project" rows="6" cols="60"></textarea>
+			<textarea name="other_skill" rows="6" cols="60"></textarea>
+		</div>
+		<br>
+		<div class="field">
+			<label>Have you ever visited a Starbucks Coffee location? Where? Describe your experience.</label><br>
+			<textarea name="store" rows="6" cols="100"></textarea>
+		</div>
+		<div class="field">
+			<label>What do you like about coffee?</label><br>
+			<textarea name="coffee" rows="6" cols="100"></textarea>
+		</div>
+		<div class="field">
+			<label>Why would you like to work for us?</label><br>
+			<textarea name="reason" rows="6" cols="100"></textarea>
+		</div>
+		<div class="field">
+			<label>Describe a specific situation where you have provided excellent customer service in your most recent position. Why was this effective?</label><br>
+			<textarea name="service" rows="6" cols="100"></textarea>
 		</div>
 	</fieldset>
 
 	<input type="submit" value="Submit form">
+
 
 </form>
 </body>
