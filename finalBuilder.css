@@ -1,0 +1,55 @@
+h1 {
+    font-family: georgia;
+}
+
+h2 {
+    font-family: georgia;
+}
+
+p {
+    font-family: georgia;
+}
+
+body {
+    background-color: blanchedalmond
+}
+
+#uw2-1 {
+    width: 500px; 
+}
+
+#uw {
+    position: relative;
+}
+
+#uwText {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 150px;
+    width: 500px;
+    color: white;
+}
+
+#uw2-2 {
+    width: 500px;
+    margin: 20px;
+}
+
+#borderedText {
+    border-style:dotted;
+    border-color: white;
+    border-width: thin;
+    text-align: center;
+}
+
+#uw3-2 {
+    float: right;
+}
+
+#uw3-3 {
+    width: 800px;
+    background: white;
+    border-radius: 25px;
+    padding: 20px;
+}
